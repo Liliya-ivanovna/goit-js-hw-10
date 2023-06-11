@@ -87,33 +87,32 @@ body {
     display: none;
     text-align: center;
     margin: 20px 0;
-    color: rgb(7, 87, 248) rgb(237, 250, 3);
+    color: rgb(7, 87, 248) rgb(32, 3, 250);
     font-weight: bold;
   }
   
   .cat-info {
     width: 800px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
   }
   
   .image {
-    max-width: 500px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    max-width: 600px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(11, 10, 10);
+    border-radius: 50px;
   }
   
   .name {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color: #333;
-  
   }
   
   .description {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color: #555;
   }
   
