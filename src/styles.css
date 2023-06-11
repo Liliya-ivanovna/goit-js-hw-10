@@ -35,9 +35,9 @@ body {
     height: 48px;
     border-radius: 50%;
     display: inline-block;
-    position: relative;
+    position:relative;
     border: 3px solid;
-    border-color: #FFF #FFF transparent transparent;
+    border-color: rgb(7, 87, 248) rgb(237, 250, 3) transparent transparent;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
   }
@@ -52,7 +52,7 @@ body {
     bottom: 0;
     margin: auto;
     border: 3px solid;
-    border-color: transparent transparent #FF3D00 #FF3D00;
+    border-color: transparent transparent rgb(237, 250, 3) rgb(7, 87, 248);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -63,7 +63,7 @@ body {
   .loader_style::before {
     width: 32px;
     height: 32px;
-    border-color: #FFF #FFF transparent transparent;
+    border-color: rgb(7, 87, 248) rgb(237, 250, 3) transparent transparent;
     animation: rotation 1.5s linear infinite;
   }
       
@@ -87,7 +87,7 @@ body {
     display: none;
     text-align: center;
     margin: 20px 0;
-    color: rgb(82, 173, 253);
+    color: rgb(7, 87, 248) rgb(237, 250, 3);
     font-weight: bold;
   }
   
@@ -107,12 +107,13 @@ body {
   
   .name {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #333;
+  
   }
   
   .description {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #555;
   }
   
