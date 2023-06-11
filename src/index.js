@@ -5,7 +5,7 @@ const selectEl = document.querySelector('.breed-select');
 const divEl = document.querySelector('.cat-info');
 const loaderEl = document.querySelector('.loader');
 const errorEl = document.querySelector('.error')
-const loaderS = document.querySelector('.loader-s');;
+const loaderSt = document.querySelector('.loader_style');
 
 loaderEl.style.display = 'none';
 errorEl.style.display = 'none';
@@ -21,10 +21,10 @@ function takeBreeds(response) {
 async function addBreeds() {
     const response = await fetchBreeds(errorEl);
     takeBreeds(response);
-    let listOfBreedsEl = breeds.map(i => {
+    let listOfBreedsEl = breeds.map(element => {
         let optionEl = document.createElement('option');
-        optionEl.value = i.id;
-        optionEl.textContent = i.name;
+        optionEl.value = element.id;
+        optionEl.textContent = element.name;
         return optionEl;
     });
     selectEl.append(...listOfBreedsEl)
@@ -47,7 +47,7 @@ function showBreed(returnedPromise) {
 
     let htmlEls = `<img src="${image}" alt="${name}" class="image"><h1 class="title">${name}</h1><p class="description">${description}</p><p class="temperament"><b class="title-temperament">Temperament: </b>${temperament}</p>`
     divEl.innerHTML = htmlEls;
-   // loaderS.style.display = 'none';
+   loaderSt.style.display = 'none';
     loaderEl.style.display = 'none';
 }
 
@@ -55,9 +55,9 @@ function showBreed(returnedPromise) {
     const breedId = selectEl.options[selectEl.selectedIndex].value;
     selectEl.style.display = 'none';
     divEl.style.display = 'none';
-    loaderS.style.display = 'block';
+    loaderSt.style.display = 'block';
     loaderEl.style.display = 'block';
-    const returnedPromise = await fetchCatByBreed(breedId, errorEl, loaderEl, loaderS, selectEl);
+    const returnedPromise = await fetchCatByBreed(breedId, errorEl, loaderEl, loaderSt, selectEl);
     showBreed(returnedPromise);
     divEl.style.display = 'block';
     selectEl.style.display = 'block';
